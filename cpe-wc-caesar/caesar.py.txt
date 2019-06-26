@@ -1,0 +1,22 @@
+plaintext=input("Enter your message:")
+plaintext1=input("Enter your code:")
+
+key1=int(input("Enter your key encode:"))
+key=-1*int(input("Enter your key decode:"))
+
+alphabet="abcdefghijklmnopqrstuvwxyz"
+
+cipher=''
+message=''
+
+for c in plaintext:
+    if c in alphabet:
+        cipher += alphabet [(alphabet.index(c)+key1)%len(alphabet)]
+        
+        print("Your encrypted message is :"+ cipher)
+   
+for m in plaintext1:
+    if m in alphabet:
+        message += alphabet [(alphabet.index(m)+key)%len(alphabet)]
+        
+        print("Your  message is :"+ message)   
